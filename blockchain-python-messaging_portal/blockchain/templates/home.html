@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>Home</title>
+		<meta http-equiv="refresh" content="">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            .body{background-color:black; height: 700px;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+            .c1{color:white;font-size:50px;text-align:center;margin:50px;text-shadow: 2px 2px 3px blue;}
+            .c2{margin-top:60px;font-size:30px; box-shadow:3px 3px 3px white;}
+        </style>
+            <script>
+           $(document).ready(function(){
+           	$("#btn1").click(function(){
+           		  window.open("/login", target="_self");
+           	});
+           	$("#btn2").click(function(){
+           	    window.open("/signup", target="_self");
+           	});
+           });
+         </script>
+</head>
+<body class="container">
+    <br>
+                <div class="container body">
+                    <br>
+                    <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                    <b class="navbar-brand" href="#"><b></b>LET'S CHAT</b></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/home">Home</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+
+        <div class="container">
+            <div><h1 class="c1"><b>Your Welcome In Decentralized messaging system</b></h1></div><br>
+            <div align="middle"><button class=" c2 btn btn-primary" id="btn1"> Click here to login</button></div><br>
+            <div align="middle"><button class="c2 btn btn-primary" id="btn2"> Click her to signUp</button></div><br>
+            <div></div>
+        </div>
+                </div>
+</body>
+</html>

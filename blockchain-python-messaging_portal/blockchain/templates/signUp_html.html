@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>registration</title>
+        <meta http-equiv="refresh" content="">
+    	<meta name="viewport" content="width-device-width,initial-scale-1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            .c1{text-align: center;color: cadetblue;vertical-align:middle;padding: 40px;margin-top: %;color:white;}
+            .c2{color: white;vertical-align:middle;height: 50px;font-size: 18px;}
+            .body1{background-color:black;padding-top: 45px}
+            .c3{padding-bottom:20px;background-color: black;}
+            .c4{color: white;align-items: flex-end}
+            .c5{text-align: right;color: white;}
+            .c7{color:white;}
+            .c9{text-align:center; font-size:20px;font-style:italic;color:red;}
+        </style>
+    </head>
+    <body class="body1 container">
+        <div class="form-group"><a href="/" class="c5">Go To Home</a></div>
+        <form action="/signup" method="POST">
+        <div class="border container form-group c3">
+            <div class="c1 form-group"><h1>Registration</h1></div>
+            <div class="row container form-group">
+                <div class = "c2 col-xs-6 col-md-3">Email or Number :</div>
+                <div class="col-xs-12 col-md-9"><input type="email" class="form-control" name="email" id="email" placeholder="Email" required/></div>
+            </div>
+            <div class="row container form-group">
+                <div class = "c2 col-xs-6 col-md-3">Password :</div>
+                <div class="col-xs-12 col-md-9"> <input type="password" class="form-control" name="password" id="password" placeholder="Password" required/></div>
+            </div>
+            <div class="row container form-gruop">
+                 <div class="col-xs-6 col-md-8 c4">Check all the information. <input type="checkbox" name="checkbox" class="checkbox"></div>
+                <div class="col-xs-12 col-md-4"><button type="submit" class="btn btn-info" value="submit">Submit</button></div>
+            </div>
+        </div>
+        <div class="col-sm-offset-1 col-sm-10 c7">
+		{% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li class="c9">{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+      </div>
+        </form>
+
+    </body>
+</html>
